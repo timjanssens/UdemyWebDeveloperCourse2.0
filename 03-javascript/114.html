@@ -55,8 +55,8 @@
 
         <p>Click on the boxes and circles as quickly as you can!</p>
 
-        <div id="result">
-            Your time:
+        <div>
+            Your time: <span id="result"> </span>
         </div>
 
 
@@ -75,9 +75,11 @@
 
 
     <script type="text/javascript">
+
+        var start = new Date().getTime();
+
         document.getElementById("figure").onclick = function () {
-           
-        
+
             var bgColor = generateColor();
 
             var height = generateHeight();
@@ -102,7 +104,17 @@
 
             document.getElementById("figure").style.borderRadius = circleOrSquare;
 
+
+            var end = new Date().getTime();
+
+            var timeTaken = (end - start)/1000;
+
+            document.getElementById("result").innerHTML = timeTaken + " sec";
+           
+
         }
+
+
 
         function generateCircleOrSquare() {
 
