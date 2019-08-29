@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript</title>
+
+
+</head>
+
+<body>
+
+    <p>How many fingers am I holding up?</p>
+    <p><input id="textGuess" type="number">
+        <button id="btnCheck">Guess!</button></p>
+
+    <script type="text/javascript">
+        document.getElementById("btnCheck").onclick = function () {
+
+            var fingers = Math.floor(Math.random() * 6);
+            var guess = document.getElementById("textGuess").value;
+
+            if (fingers == guess) {
+
+                alert("Yes you guessed " + guess + " that is correct");
+                
+            } else {
+
+                alert("You guessed " + guess + " that is wrong, the correct guess would be " + fingers);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

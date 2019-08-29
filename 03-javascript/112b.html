@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript</title>
+
+
+</head>
+
+<body>
+
+    <input type="number" id="firstNumber">
+    <input type="number" id="secondNumber">
+
+    <button id="btnAverage">Get average</button>
+
+    <div id="solution"> </div>
+
+
+
+    <script type="text/javascript">
+        function calculateAverage(numberOne, numberTwo) {
+
+            var average = (+numberOne + +numberTwo) / 2;
+
+            return (average);
+
+        }
+
+
+        document.getElementById("btnAverage").onclick = function () {
+
+            var number1 = document.getElementById("firstNumber").value;
+
+            
+            var number2 = document.getElementById("secondNumber").value;
+
+            var average = calculateAverage(number1, number2);
+
+             document.getElementById("solution").innerHTML ="The solution is " + average;
+            
+        }
+    </script>
+
+</body>
+
+</html>

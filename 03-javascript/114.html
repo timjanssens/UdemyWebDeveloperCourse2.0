@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript</title>
+
+
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript</title>
+
+    <style type="text/css">
+        .intro {
+
+            margin-bottom: 30px;
+        }
+
+        #result {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .mainContainer {
+            /* height: 500px;
+            width: 1000px; */
+            /* background-color: aqua; */
+        }
+
+        #figure {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="intro">
+
+        <H1>Test Your Reactions</H1>
+
+        <p>Click on the boxes and circles as quickly as you can!</p>
+
+        <div id="result">
+            Your time:
+        </div>
+
+
+        <button id="generator">START</button>
+
+
+    </div>
+
+
+    <div class="mainContainer">
+
+        <div id="figure"></div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        document.getElementById("figure").onclick = function () {
+           
+        
+            var bgColor = generateColor();
+
+            var height = generateHeight();
+
+            var fromSide = generatePositionSide();
+
+            var fromTop = generatePositionTop();
+
+            var circleOrSquare = generateCircleOrSquare();
+
+
+
+            document.getElementById("figure").style.backgroundColor = bgColor;
+
+            document.getElementById("figure").style.height = height;
+
+            document.getElementById("figure").style.width = height;
+
+            document.getElementById("figure").style.marginLeft = fromSide;
+
+            document.getElementById("figure").style.marginTop = fromTop;
+
+            document.getElementById("figure").style.borderRadius = circleOrSquare;
+
+        }
+
+        function generateCircleOrSquare() {
+
+            var x = Math.floor(Math.random() + 0.5);
+
+            if (x < 0.5) {
+
+                return (0 + "%");
+
+            } else {
+
+                return (50 + "%");
+            }
+
+        }
+
+        function generateHeight() {
+
+            var x = Math.floor(Math.random() * 200 + 50);
+
+            var height = x + "px";
+
+            return (height);
+        }
+
+        function generatePositionSide() {
+
+            var fromSide = Math.floor(Math.random() * 900);
+
+            fromSide = fromSide + "px";
+
+            return (fromSide)
+
+        }
+
+
+        function generatePositionTop() {
+
+            var fromTop = Math.floor(Math.random() * 300);
+
+            fromTop = fromTop + "px";
+
+            return (fromTop)
+
+        }
+
+
+
+        function generateColor() {
+
+            var x = Math.floor(Math.random() * 256);
+
+            var y = Math.floor(Math.random() * 256);
+
+            var z = Math.floor(Math.random() * 256);
+
+            var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+            return (bgColor);
+        }
+    </script>
+
+</body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript</title>
+
+
+</head>
+
+<body>
+
+    <div id="screen"></div>
+  
+    <script type="text/javascript">
+
+        var text ="";    
+        var tweets = ["Hi everyone", "I love cornflakes", "Night, night :)", "Sweet dreams!"]
+       
+       for(var i = 0; i < tweets.length ; i++) {
+
+          text= text + "  " + "<p>" + tweets[i] + "</p>";
+
+       // document.getElementById("screen").innerHTML = tweets[i] + '\n';
+
+       }
+
+       document.getElementById("screen").innerHTML = text;       
+
+
+    </script>
+
+</body>
+
+</html>
