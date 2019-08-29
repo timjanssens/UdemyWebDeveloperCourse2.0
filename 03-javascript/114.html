@@ -60,9 +60,6 @@
         </div>
 
 
-        <button id="generator">START</button>
-
-
     </div>
 
 
@@ -79,6 +76,8 @@
         var start = new Date().getTime();
 
         document.getElementById("figure").onclick = function () {
+
+            
 
             var bgColor = generateColor();
 
@@ -104,6 +103,7 @@
 
             document.getElementById("figure").style.borderRadius = circleOrSquare;
 
+            document.getElementById("figure").style.display = "block";
 
             var end = new Date().getTime();
 
@@ -111,9 +111,10 @@
 
             document.getElementById("result").innerHTML = timeTaken + " sec";
            
-
+            start = new Date().getTime();
         }
 
+        
 
 
         function generateCircleOrSquare() {
