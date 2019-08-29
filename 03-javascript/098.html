@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+
+    <style type="text/css">
+        #red {
+            color: red;
+        }
+
+
+        #blue {
+            color: blue
+        }
+
+
+        #yellow {
+            color: yellow;
+        }
+
+        p {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <p id="circles"><span id="red">&#x25cb</span> <span id="blue">&#x25cb</span> <span id="yellow">&#x25cb</span></p>
+
+    <button id="disappear">
+        disappear
+    </button>
+
+
+
+
+    <script type="text/javascript">
+
+        document.getElementById("disappear").onclick = function() {
+            document.getElementById("circles").style.display ="none";
+        }
+
+    </script>
+
+</body>
+
+</html>
